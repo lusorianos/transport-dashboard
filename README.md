@@ -1,73 +1,156 @@
-# React + TypeScript + Vite
+# Portal do Cliente 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-19.2.0-blue?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.2.4-purple?logo=vite)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.17-blue?logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-Private-red)](#)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrição
 
-## React Compiler
+O **Portal do Cliente** é uma aplicação web moderna que fornece uma interface interativa para clientes.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Principais recursos:
 
-## Expanding the ESLint configuration
+- Mapas interativos com **Leaflet**
+- Gráficos dinâmicos com **Recharts**
+- Notificações com **React Toastify**
+- Navegação SPA com **React Router DOM**
+- Tipagem segura com **TypeScript**
+- Testes unitários e cobertura com **Vitest**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Demonstração
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+![Demonstração do Portal do Cliente](./docs/demo.gif)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Screenshots
+
+| Tela Inicial | Gráfico de Dados | Mapa Interativo |
+|--------------|----------------|----------------|
+| ![home](./docs/home.png) | ![chart](./docs/chart.png) | ![map](./docs/map.png) |
+
+---
+
+## Tecnologias Utilizadas
+
+- **React 19**  
+- **TypeScript 5.9**  
+- **Vite 7**  
+- **TailwindCSS 4**  
+- **Leaflet & React-Leaflet**  
+- **Recharts**  
+- **React Router DOM**  
+- **React Toastify**  
+- **Vitest & React Testing Library**  
+- **ESLint**
+
+---
+
+## Pré-requisitos
+
+- Node.js >= 20  
+- Gerenciador de pacotes (PNPM, npm ou yarn)
+
+---
+
+## Instalação
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd portal-do-cliente
+pnpm install
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Comando                  | Descrição                                                                 |
+|---------------------------|---------------------------------------------------------------------------|
+| `pnpm dev`               | Inicia servidor de desenvolvimento do Vite.                               |
+| `pnpm build`             | Compila para produção.                                                    |
+| `pnpm preview`           | Preview local da build de produção.                                       |
+| `pnpm lint`              | Verifica padrões de código com ESLint.                                    |
+| `pnpm test`              | Executa testes unitários.                                                 |
+| `pnpm test:watch`        | Executa testes em modo watch.                                             |
+| `pnpm test:coverage`     | Gera relatório de cobertura de testes.                                    |
+
+---
+
+## Estrutura do Projeto
+
 ```
+portal-do-cliente/
+│
+├─ public/                # Arquivos estáticos (imagens, vídeos, GIFs)
+├─ src/
+│  ├─ assets/             # Recursos estáticos
+│  ├─ components/         # Componentes reutilizáveis
+│  ├─ context/            # Contextos React
+│  ├─ pages/              # Páginas da aplicação
+│  ├─ routes/             # Configuração de rotas
+│  ├─ styles/             # Estilos/Tailwind
+│  └─ main.tsx            # Entry point da aplicação
+├─ package.json
+├─ tsconfig.json
+└─ vite.config.ts
+```
+
+---
+
+## Roadmap
+
+- [x] Configuração do projeto com Vite, React e TypeScript  
+- [x] Integração com TailwindCSS  
+- [x] Criação de componentes reutilizáveis  
+- [x] Implementação de mapas interativos com Leaflet  
+- [x] Visualização de dados com Recharts  
+- [x] Notificações com React Toastify  
+- [ ] Testes unitários completos com Vitest  
+- [ ] Implementar autenticação e persistência de login  
+- [ ] Otimização de performance e build
+
+---
+
+## Testes
+
+Executar testes:
+
+```bash
+pnpm test
+```
+
+Modo watch:
+
+```bash
+pnpm test:watch
+```
+
+Cobertura:
+
+```bash
+pnpm test:coverage
+```
+
+---
+
+## Contribuição
+
+1. Faça um fork do repositório  
+2. Crie uma branch: `git checkout -b minha-feature`  
+3. Faça commit das alterações: `git commit -m "Minha feature"`  
+4. Envie para o branch remoto: `git push origin minha-feature`  
+5. Abra um Pull Request
+
+---
+
+## Licença
+
+Este projeto é **privado**.

@@ -48,7 +48,7 @@ export default function PageShipmentDetails() {
     ? [shipment.destinoLat, shipment.destinoLng] as [number, number]
     : null;
 
-  const routePoints = origem && destino ? [origem, destino] : [];
+  // const routePoints = origem && destino ? [origem, destino] : [];
 
   return (
     <>
@@ -163,9 +163,9 @@ export default function PageShipmentDetails() {
                   </Popup>
                 </Marker>
               )}
-              {routePoints.length === 2 && (
+              {/* {routePoints.length === 2 && (
                 <Polyline positions={routePoints} />
-              )}
+              )} */}
             </MapContainer>
           </div>
         </Card>
