@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme{
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-gray-100: #FAFAFA;
+  --color-gray-200: #F3F4F6;
+  --color-gray-300: #EDEDED;
+  --color-gray-400: #504C43;
+  --color-red-light: #D9425C;
+  --color-red-base: #CF0A2C;
+  --color-green-ultra-light: #DBFCE7;
+  --color-green-light: #B9F8CF;
+  --color-green-base: #34A86A;
+  --color-blue-base: #3498DB;
+  --color-purple-base: #A78DFB;
+  --color-orange-base: #FB8C00;
+
+  --shadow-sm: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  
+  --font-sans: "Roboto", sans-serif;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
